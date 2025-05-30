@@ -1,0 +1,189 @@
+:root {
+	--size-wheel: 80vw; /* Use viewport width for responsive wheel size */
+	--max-wheel-size: 25rem; /* Maximum size for larger screens */
+	--min-wheel-size: 15rem; /* Minimum size for smaller screens */
+}
+
+html {
+	box-sizing: border-box;
+	height: 100%;
+	overflow: auto; /* Changed from hidden to allow scrolling on mobile */
+}
+
+body {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	padding: 1rem; /* Add padding for mobile */
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.title {
+	color: #ff0000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: clamp(1.8rem, 6vw, 2.5rem); /* Responsive font size */
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+.msg {
+	min-height: 4rem;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-top: 0.5rem;
+	text-transform: capitalize;
+	color: #ff0000;
+	font-size: clamp(1rem, 4vw, 1.2rem); /* Responsive font size */
+	text-align: center;
+}
+
+ul {
+	position: relative;
+	padding: 0;
+	margin: 1rem 0;
+	width: clamp(var(--min-wheel-size), var(--size-wheel), var(--max-wheel-size));
+	height: clamp(var(--min-wheel-size), var(--size-wheel), var(--max-wheel-size));
+	border: 8px solid #ff0000; /* Slightly thinner border for mobile */
+	border-radius: 50%;
+	list-style: none;
+	overflow: hidden;
+	transition: cubic-bezier(0.075, 0.8, 0.2, 1) 7s;
+}
+
+span {
+	display: inline-block;
+	position: relative;
+	padding: 0.5rem;
+}
+
+span::before {
+	content: '';
+	position: absolute;
+	top: 0rem;
+	left: 50%;
+	border-left: 1.5rem solid transparent; /* Adjusted for smaller screens */
+	border-right: 1.5rem solid transparent;
+	border-top: 3rem solid #ff0000; /* Adjusted arrow size */
+	z-index: 2;
+	transform: translateX(-50%);
+	animation: arrow ease-out 0.6s infinite;
+}
+
+@keyframes arrow {
+	0% {
+		top: -1.5rem;
+	}
+	80% {
+		top: 0;
+	}
+	100% {
+		top: -1rem;
+	}
+}
+
+span::after {
+	content: '';
+	width: 1.5rem; /* Smaller center circle */
+	height: 1.5rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	border-radius: 50%;
+}
+
+li {
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50%;
+	height: 50%;
+	transform-origin: 0% 100%;
+}
+
+.text {
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	left: -100%;
+	width: 200%;
+	height: 200%;
+	display: block;
+	text-align: center;
+	padding-top: clamp(1rem, 3vw, 1.7rem); /* Responsive padding */
+	font-weight: 600;
+	color: #fff;
+}
+
+.text > b {
+	display: inline-block;
+	word-break: break-word;
+	max-width: 30%; /* Increased for better text fit on mobile */
+	font-size: clamp(0.8rem, 2.5vw, 1rem); /* Responsive text size */
+}
+
+.text-1 {
+	background-color: #ff0000;
+}
+
+.text-2 {
+	background-color: #fff;
+	color: #ff0000;
+}
+
+.main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	max-width: 600px; /* Max width for larger screens */
+	margin: 0 auto;
+}
+
+button {
+	display: inline-block;
+	text-align: center;
+	border: 0;
+	background-color: #ff0000;
+	color: #fff;
+	font-size: clamp(1rem, 4vw, 1.5rem); /* Responsive button text */
+	border-radius: 4rem;
+	padding: 0.5rem 1.5rem;
+	width: auto;
+	cursor: pointer;
+	outline: none;
+}
+
+button:hover {
+	opacity: 0.8;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 480px) {
+	:root {
+		--size-wheel: 90vw; /* Larger wheel relative to screen on small devices */
+	}
+
+	span::before {
+		border-left: 1rem solid transparent;
+		border-right: 1rem solid transparent;
+		border-top: 2rem solid #ff0000;
+	}
+
+	span::after {
+		width: 1rem;
+		height: 1rem;
+	}
+
+	.text > b {
+		max-width: 40%; /* More space for text on very small screens */
+	}
+}
