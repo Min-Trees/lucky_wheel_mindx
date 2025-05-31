@@ -7,7 +7,7 @@
 html {
 	box-sizing: border-box;
 	height: 100%;
-	overflow: auto; /* Changed from hidden to allow scrolling on mobile */
+	overflow: auto; /* Allow scrolling on mobile */
 }
 
 body {
@@ -117,7 +117,7 @@ li {
 	height: 200%;
 	display: block;
 	text-align: center;
-	padding-top: clamp(1rem, 3vw, 1.7rem); /* Responsive padding */
+	padding-top: clamp(0.6rem, 2vw, 1rem); /* Reduced padding for better text fit */
 	font-weight: 600;
 	color: #fff;
 }
@@ -125,9 +125,12 @@ li {
 .text > b {
 	display: inline-block;
 	word-break: break-word;
-	max-width: 30%; /* Increased for better text fit on mobile */
-	font-size: clamp(0.8rem, 2.5vw, 1rem); /* Responsive text size */
+	max-width: 60%; /* Increased for longer text with wrapping */
+	font-size: clamp(0.4rem, 1.5vw, 0.6rem); /* Smaller font for 18 segments */
+	line-height: 1.1; /* Tighter line height for wrapped text */
+	white-space: normal; /* Ensure text wraps */
 }
+
 
 .text-1 {
 	background-color: #ff0000;
@@ -184,6 +187,7 @@ button:hover {
 	}
 
 	.text > b {
-		max-width: 40%; /* More space for text on very small screens */
+		max-width: 70%; /* More space for text on very small screens */
+		font-size: clamp(0.35rem, 1.4vw, 0.55rem); /* Slightly smaller font for mobile */
 	}
 }

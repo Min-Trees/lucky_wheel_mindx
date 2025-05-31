@@ -11,8 +11,8 @@
 	//=====< List of prizes >=====
 	const listGift = [
 		{
-			text: 'Bánh',
-			percent: 20 / 100,
+			text: 'Bánh Akio',
+			percent: 10 / 100,
 		},
 		{
 			text: 'Kẹo',
@@ -27,8 +27,40 @@
 			percent: 5 / 100,
 		},
 		{
-			text: 'Thạch',
+			text: 'Thạch Dai Dai',
 			percent: 10 / 100,
+		},
+        {
+			text: 'Thạch Bút Chì',
+			percent: 10 / 100,
+		},
+        {
+			text: 'Thạch Phô Mai',
+			percent: 5 / 100,
+		},
+        {
+			text: 'Bánh Gạo',
+			percent: 25 / 100,
+		},
+        {
+			text: 'Bánh xốp phô mai',
+			percent: 10 / 100,
+		},
+        {
+			text: 'Quạt MindX',
+			percent: 10 / 100,
+		},
+        {
+			text: 'Túi Canvas Handmade',
+			percent: 3 / 100,
+		},
+        {
+			text: 'Quạt Handmade',
+			percent: 2 / 100,
+		},
+        {
+			text: 'Xếp hình rubik 3D',
+			percent: 2 / 100,
 		},
 		{
 			text: 'Bàn phím',
@@ -40,6 +72,14 @@
 		},
 		{
 			text: 'Balo',
+			percent: 0 / 100,
+		},
+        {
+			text: 'Bình Giữ nhiệt ',
+			percent: 0 / 100,
+		},
+        {
+			text: 'Hộp bút',
 			percent: 0 / 100,
 		},
 	];
