@@ -30,10 +30,7 @@
 			text: 'Thạch Dai Dai',
 			percent: 10 / 100,
 		},
-        {
-			text: 'Thạch Bút Chì',
-			percent: 10 / 100,
-		},
+
         {
 			text: 'Thạch Phô Mai',
 			percent: 5 / 100,
