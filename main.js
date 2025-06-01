@@ -13,7 +13,7 @@
 
 		{
 			text: 'Kẹo',
-			percent: 20 / 100,
+			percent: 0 / 100,
 		},
 		{
 			text: 'Vòng tay',
