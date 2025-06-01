@@ -40,17 +40,21 @@
 			text: 'Quạt MindX',
 			percent: 10 / 100,
 		},
+		{
+			text: 'Thạch bút chì',
+			percent: 10/100,
+		},
         {
 			text: 'Túi Canvas Handmade',
-			percent: 3 / 100,
+			percent: 5 / 100,
 		},
         {
 			text: 'Quạt Handmade',
-			percent: 2 / 100,
+			percent: 5 / 100,
 		},
         {
 			text: 'Xếp hình rubik 3D',
-			percent: 2 / 100,
+			percent: 5 / 100,
 		},
 		{
 			text: 'Bàn phím',
