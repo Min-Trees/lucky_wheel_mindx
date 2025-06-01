@@ -10,10 +10,7 @@
 
 	//=====< List of prizes >=====
 	const listGift = [
-		{
-			text: 'Bánh Akio',
-			percent: 10 / 100,
-		},
+
 		{
 			text: 'Kẹo',
 			percent: 20 / 100,
@@ -25,10 +22,6 @@
 		{
 			text: 'Móc khóa',
 			percent: 5 / 100,
-		},
-		{
-			text: 'Thạch Dai Dai',
-			percent: 10 / 100,
 		},
 
         {
