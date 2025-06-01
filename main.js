@@ -71,6 +71,7 @@
         {
 			text: 'Hộp bút',
 			percent: 0 / 100,
+			
 		},
 	];
 
